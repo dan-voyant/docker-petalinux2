@@ -134,7 +134,7 @@ RUN cd / && wget -q ${HTTP_SERV}/${PETA_RUN_FILE} && \
   mkdir -p /opt/Xilinx && \
   chmod 777 /tmp /opt/Xilinx && \
   cd /tmp && \
-  sudo -u petalinux -i /accept-eula.sh /${PETA_RUN_FILE} /opt/Xilinx/petalinux && \
+  sudo -u petalinux -i /${PETA_RUN_FILE} --dir=/opt/Xilinx/petalinux --skip_license && \
   rm -f /${PETA_RUN_FILE} /accept-eula.sh
 
 ARG VIVADO_INSTALLER
