@@ -17,12 +17,14 @@ they change the links all the time, though, so you just need to find where to do
 
 2. put it in the right place
 
+```
 mv ~/Downloads/petalinux-v2020.2-final-installer.run ./installers
-
+```
 3. run the build to build the docker image
 
+```
 ./docker_build.sh 2020.2
-
+```
 4. navigate to the Voyant-Firmware repo, and run the start script
 
 ```
