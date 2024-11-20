@@ -8,6 +8,37 @@ SPDX-FileCopyrightText: 2021-2023 Carles Fernandez-Prades <carles.fernandez@cttc
 )
 <!-- prettier-ignore-end -->
 
+# what Dan Did:
+1. download petalinux
+
+https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2020.2-final-installer.run
+
+they change the links all the time, though, so you just need to find where to download petalinux version 2020.2
+
+2. put it in the right place
+
+mv ~/Downloads/petalinux-v2020.2-final-installer.run ./installers
+
+3. run the build to build the docker image
+
+./docker_build.sh 2020.2
+
+4. navigate to the Voyant-Firmware repo, and run the start script
+
+```
+cd ~/workspace/repos/Voyant-Firmware
+
+~/workspace/repos/docker-petalinux2/etc/petalin2.sh 
+```
+
+5. (inside the running docker image) do the build
+
+```
+./build.sh --name=larke --board=backend --media=sdcard --suffix=tst01
+```
+
+
+
 # docker-petalinux2
 
 A somehow generic Xilinx PetaLinux & Vivado Docker image, using Ubuntu 18.04 as
