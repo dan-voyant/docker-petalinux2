@@ -21,3 +21,4 @@ installers/*.bin
 installers/*.tar
 installers/*.tgz
 installers/*.tar.gz
+petalinux_installation_log
