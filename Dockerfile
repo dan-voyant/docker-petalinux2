@@ -123,11 +123,11 @@ RUN cd / && wget -q ${HTTP_SERV}/${PETA_RUN_FILE} && \
   cd /tmp && \
   sudo -u petalinux -i /${PETA_RUN_FILE} --dir=/opt/Xilinx/petalinux --skip_license
 
-ARG VIVADO_INSTALLER
-ARG VIVADO_AGREE="XilinxEULA,3rdPartyEULA"
-ARG VIVADO_UPDATE
+# ARG VIVADO_INSTALLER
+# ARG VIVADO_AGREE="XilinxEULA,3rdPartyEULA"
+# ARG VIVADO_UPDATE
 
-COPY install_config.txt /vivado-config/
+# COPY install_config.txt /vivado-config/
 
 # make /bin/sh symlink to bash instead of dash:
 RUN echo "dash dash/sh boolean false" | debconf-set-selections
